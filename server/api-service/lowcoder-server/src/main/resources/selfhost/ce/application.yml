@@ -18,6 +18,11 @@ spring:
     max-in-memory-size: 20MB
   webflux:
     context-path: /
+  mail:
+    host: ${LOWCODER_ADMIN_SMTP_HOST:smtp.gmail.com}
+    port: ${LOWCODER_ADMIN_SMTP_PORT:587}
+    username: ${LOWCODER_ADMIN_SMTP_USERNAME:yourmail@gmail.com}
+    password: ${LOWCODER_ADMIN_SMTP_PASSWORD:yourpass}
 
 server:
   compression:
@@ -55,6 +60,8 @@ common:
     mode: ${LOWCODER_WORKSPACE_MODE:SAAS}
   marketplace:
     private-mode: ${LOWCODER_MARKETPLACE_PRIVATE_MODE:true}
+  lowcoder-public-url: ${LOWCODER_PUBLIC_URL:http://localhost:8080}
+  lost-password-email-sender: ${LOWCODER_LOST_PASSWORD_EMAIL_SENDER:info@lowcoder.org}
 
 material:
   mongodb-grid-fs:

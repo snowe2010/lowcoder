@@ -9,6 +9,20 @@ spring:
   main:
     allow-bean-definition-overriding: true
     allow-circular-references: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: yourmail@gmail.com
+    password: yourpass
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+        transport:
+          protocol: smtp
 
 server:
   compression:
@@ -46,6 +60,8 @@ common:
     host: http://127.0.0.1:6060
   marketplace:
     private-mode: false
+  lowcoder-public-url: http://localhost:8080
+  lost-password-email-sender: info@lowcoder.org
 
 material:
   mongodb-grid-fs:

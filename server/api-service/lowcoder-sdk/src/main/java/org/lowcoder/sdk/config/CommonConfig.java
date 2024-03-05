@@ -45,6 +45,8 @@ public class CommonConfig {
     private JsExecutor jsExecutor = new JsExecutor();
     private Set<String> disallowedHosts = new HashSet<>();
     private Marketplace marketplace = new Marketplace();
+    private String lowcoderPublicUrl;
+    private String lostPasswordEmailSender;
 
     public boolean isSelfHost() {
         return !isCloud();
